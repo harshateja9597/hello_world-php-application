@@ -1,8 +1,14 @@
 <?php
 
+// Define the function
 function greet($name)
 {
     return "Hello, $name!";
 }
+
+// Call the function with a name
 $name = "John";
-echo greet($name);
+$greeting = greet($name);
+
+// Output the greeting
+echo $greeting;
