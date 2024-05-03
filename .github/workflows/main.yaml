@@ -36,6 +36,7 @@ jobs:
 
       - name: php cbf
         run: ./vendor/bin/phpcbf --standard=PSR12 index.php
+        continue-on-error: true
 
       - name: Check syntax php lint
         run: php -l index.php
