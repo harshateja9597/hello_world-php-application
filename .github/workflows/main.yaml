@@ -25,5 +25,6 @@ jobs:
         run: composer require phpmd/phpmd
 
       - name: php md 
-        run: phpmd index.php text phpmd.xml
+        run: ./vendor/bin/phpmd index.php text phpmd.xml
+
 
