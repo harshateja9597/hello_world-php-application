@@ -27,4 +27,7 @@ jobs:
       - name: php md 
         run: ./vendor/bin/phpmd index.php text phpmd.xml
 
+      - name: Check syntax php lint
+        run: php -l index.php
+
 
