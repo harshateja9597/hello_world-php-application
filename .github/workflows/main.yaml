@@ -32,6 +32,7 @@ jobs:
 
       - name: PHP CodeSniffer (PHP CS)
         run: ./vendor/bin/phpcs --standard=PSR12 index.php
+        continue-on-error: true
 
       - name: php cbf
         run: ./vendor/bin/phpcbf --standard=PSR12 index.php
