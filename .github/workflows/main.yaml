@@ -24,11 +24,14 @@ jobs:
       - name: installing phpmd dependency
         run: composer require phpmd/phpmd
 
+      - name: install phpcs locally
+        run: composer require squizlabs/php_codesniffer
+
       - name: php md 
         run: ./vendor/bin/phpmd index.php text phpmd.xml
 
       - name: PHP CodeSniffer (PHP CS)
-        run: ./vendor/bin/phpcs --standard=PSR12 --ignore=vendor .
+        run: ./vendor/bin/phpcs --standard=PSR12 index.php
 
       - name: Check syntax php lint
         run: php -l index.php
