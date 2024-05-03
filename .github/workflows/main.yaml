@@ -27,6 +27,9 @@ jobs:
       - name: php md 
         run: ./vendor/bin/phpmd index.php text phpmd.xml
 
+      - name: PHP CodeSniffer (PHP CS)
+        run: ./vendor/bin/phpcs --standard=PSR12 --ignore=vendor .
+
       - name: Check syntax php lint
         run: php -l index.php
 
