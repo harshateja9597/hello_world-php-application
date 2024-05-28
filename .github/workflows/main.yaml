@@ -28,15 +28,13 @@ jobs:
         run: composer require squizlabs/php_codesniffer
 
       - name: php md 
-        run: ./vendor/bin/phpmd index.php text phpmd.xml
+        run: ./vendor/bin/phpmd index.php text .
 
       - name: PHP CodeSniffer (PHP CS)
-        run: ./vendor/bin/phpcs --standard=PSR12 index.php
-        continue-on-error: true
+        run: ./vendor/bin/phpcs --standard=PSR12 .
 
       - name: php cbf
-        run: ./vendor/bin/phpcbf --standard=PSR12 index.php
-        continue-on-error: true
+        run: ./vendor/bin/phpcbf --standard=PSR12 .
 
       - name: Check syntax php lint
         run: php -l index.php
